@@ -22,6 +22,10 @@ console.log(PhoneNumber.isTollFree('(833) 333-3333')); // true, this is toll-fre
 console.log(PhoneNumber.formatStandard('206 867 1234')); // "+12068671234" (E.164 format)
 console.log(PhoneNumber.formatFriendly('12068671234')); // "(206) 867-1234"
 console.log(PhoneNumber.formatCompact('(206) 867-1234')); // "206-867-1234"
+
+console.log(PhoneNumber.standard('206 867 1234')); // "+12068671234" (E.164 format)
+console.log(PhoneNumber.friendly('12068671234')); // "(206) 867-1234"
+console.log(PhoneNumber.compact('(206) 867-1234')); // "206-867-1234"
 ```
 
 ## Input format
@@ -44,6 +48,8 @@ This module does not use any external service. It can’t tell if the phone numb
 - **formatStandard(_phoneNumber_)** – Returns the phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). This is recommended for storing phone numbers in a database. It begins with a `+` sign followed by the “country code” (which is `1` for all countries that are part of the NANP). Example: `+12068671234`
 - **formatFriendly(_phoneNumber_)** – Returns the common display format for phone numbers: `(206) 867-1234`
 - **formatCompact(_phoneNumber_)** – Returns another common display format that is slightly shorter: `206-867-1234`
+
+Shorter-named aliases of these functions are available: **standard(_phoneNumber_)**, **friendly(_phoneNumber_)**, and **compact(_phoneNumber_)**.
 
 If you try to format an invalid phone number, `InvalidPhoneNumberError` will be thrown.
 

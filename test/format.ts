@@ -1,9 +1,12 @@
 import test from 'ava';
 import {
+  compact,
   formatCompact,
   formatFriendly,
   formatStandard,
-  InvalidPhoneNumberError
+  friendly,
+  InvalidPhoneNumberError,
+  standard
 } from '../src';
 
 test('formatStandard() formats valid phone numbers', t => {
@@ -43,4 +46,10 @@ test('formatCompact() throws an error for invalid phone numbers', t => {
     },
     { instanceOf: InvalidPhoneNumberError }
   );
+});
+
+test('format short-named alias functions are the same as their long-named equivalents', t => {
+  t.deepEqual(standard, formatStandard);
+  t.deepEqual(friendly, formatFriendly);
+  t.deepEqual(compact, formatCompact);
 });

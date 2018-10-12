@@ -33,3 +33,9 @@ export function formatCompact(phoneNumber: string) {
   const parts = parse(phoneNumber);
   return `${parts.npa}-${parts.nxx}-${parts.station}`;
 }
+
+// Convenience aliases with shorter names for these frequently-used functions.
+
+export const standard = formatStandard;
+export const friendly = formatFriendly;
+export const compact = formatCompact;

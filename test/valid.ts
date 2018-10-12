@@ -19,6 +19,7 @@ test('valid() returns true for valid phone numbers', t => {
   t.true(valid('9598675309'));
   t.true(valid('206-206-5309'));
   t.true(valid('206-614-5309'));
+  t.true(valid('855-211-1234'));
 });
 
 test('valid() returns false for numbers with invalid NPAs', t => {

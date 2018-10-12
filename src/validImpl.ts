@@ -1,7 +1,8 @@
+import { isTollFreeImpl } from './isTollFreeImpl';
 import { ParsedPhoneNumber } from './parsedPhoneNumber';
 
 /**
- * Internal implementation for valid(). Takes a PhoneNumberParts object instead of a
+ * Internal implementation for valid(). Takes a ParsedPhoneNumber object instead of a
  * string.
  */
 export function validImpl(parts?: ParsedPhoneNumber) {
@@ -20,8 +21,10 @@ export function validImpl(parts?: ParsedPhoneNumber) {
   }
 
   if (parts.nxx.endsWith('11')) {
-    // NXXs that end with '11' are invalid
-    return false;
+    // NXXs that end with '11' are invalid unless they are toll-free
+    if (!isTollFreeImpl(parts)) {
+      return false;
+    }
   }
 
   if (parts.nxx === '555') {

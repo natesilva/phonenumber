@@ -1,0 +1,50 @@
+{
+  "name": "@reallyuseful/phonenumber",
+  "version": "1.0.0",
+  "description": "Parser and validator for US and Canadian phone numbers",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "scripts": {
+    "clean": "del-cli build",
+    "build": "tsc",
+    "prettier": "prettier --write \"{src,test}/**/*.?(ts|json)\"",
+    "prepare": "npm run clean && npm run build",
+    "test": "ava",
+    "test:watch": "ava -w"
+  },
+  "keywords": [
+    "phone",
+    "phone number",
+    "phonenumber",
+    "validation",
+    "NANP",
+    "E.164"
+  ],
+  "author": "Nate Silva <nate@natesilva.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^10.11.4",
+    "ava": "1.0.0-beta.8",
+    "del-cli": "^1.1.0",
+    "prettier": "^1.14.3",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.1"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register/transpile-only"
+    ]
+  },
+  "prettier": {
+    "printWidth": 90,
+    "singleQuote": true
+  }
+}

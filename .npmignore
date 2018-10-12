@@ -1,0 +1,7 @@
+**/*.test.*
+test.*
+src
+.vscode
+ava.config.js
+.prettier*
+.editorconfig

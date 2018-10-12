@@ -9,6 +9,11 @@ function digitsOnly(s: string) {
 
 /** Internal implementation for parse(). Does not attempt to validate the phone number. */
 export function parseImpl(phoneNumber: string) {
+  if (typeof phoneNumber !== 'string') {
+    // null, undefined, or non-string value passed by non-TypeScript code
+    return undefined;
+  }
+
   const digits = digitsOnly(phoneNumber);
   const matches = digits.match(nanpPattern);
 

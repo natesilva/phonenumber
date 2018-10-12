@@ -20,6 +20,13 @@ test('formatStandard() throws an error for invalid phone numbers', t => {
     },
     { instanceOf: InvalidPhoneNumberError }
   );
+
+  t.throws(
+    () => {
+      formatStandard(null);
+    },
+    { instanceOf: InvalidPhoneNumberError }
+  );
 });
 
 test('formatFriendly() formats valid phone numbers', t => {
@@ -33,6 +40,13 @@ test('formatFriendly() throws an error for invalid phone numbers', t => {
     },
     { instanceOf: InvalidPhoneNumberError }
   );
+
+  t.throws(
+    () => {
+      formatFriendly(null);
+    },
+    { instanceOf: InvalidPhoneNumberError }
+  );
 });
 
 test('formatCompact() formats valid phone numbers', t => {
@@ -43,6 +57,13 @@ test('formatCompact() throws an error for invalid phone numbers', t => {
   t.throws(
     () => {
       formatCompact('1238675309');
+    },
+    { instanceOf: InvalidPhoneNumberError }
+  );
+
+  t.throws(
+    () => {
+      formatCompact(null);
     },
     { instanceOf: InvalidPhoneNumberError }
   );

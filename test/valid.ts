@@ -42,3 +42,9 @@ test('valid() returns false for too-short phone numbers', t => {
   t.false(valid('206-867-530'));
   t.false(valid('311'));
 });
+
+test('valid() returns false for non-string phone numbers', t => {
+  t.false(valid(null));
+  t.false(valid(undefined));
+  t.false(valid(42 as any)); // any b/c it won’t work in TypeScript but is possible in JS
+});

@@ -17,9 +17,9 @@ export function parseImpl(phoneNumber: string) {
   }
 
   const result: ParsedPhoneNumber = {
-    npa: digits.slice(0, 3),
-    nxx: digits.slice(3, 6),
-    station: digits.slice(6, 10)
+    npa: matches[1],
+    nxx: matches[2],
+    station: matches[3]
   };
 
   return result;

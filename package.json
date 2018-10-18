@@ -1,6 +1,6 @@
 {
   "name": "@reallyuseful/phonenumber",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Parser and validator for US and Canadian phone numbers",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",

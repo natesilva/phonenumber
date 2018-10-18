@@ -66,3 +66,9 @@ If you call this function with an invalid phone number, `InvalidPhoneNumberError
 - **isTollFree(_phoneNumber_)** - Returns true for valid phone numbers in area codes `800`, `888`, `877`, `866`, `855`, `844`, or `833`.
 
 If you call this function with an invalid phone number, `InvalidPhoneNumberError` will be thrown.
+
+# Alternatives
+
+This is a lightweight module that handles US/Canadian phone numbers. Its primary use case is validation of data that is going into a database, and formatting that data for display.
+
+If you need something fancier, or need to handle other countries, try [`google-libphonenumber`](https://www.npmjs.com/package/google-libphonenumber).

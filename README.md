@@ -12,9 +12,9 @@ const PhoneNumber = require('@reallyuseful/phonenumber');
 console.log(PhoneNumber.valid('206.867.1234')); // true, follows correct digit pattern
 console.log(PhoneNumber.valid('206-123-4567')); // false, invalid digit pattern
 console.log(PhoneNumber.valid('206-555-6666')); // false, 555 is not a valid NXX
-console.log(PhoneNumber.valid('1-006-867-1234')); // false, 006 is not a valid NPA
+console.log(PhoneNumber.valid('1-006-867-1234')); // false, 006 is not a valid NPA format
 
-console.log(PhoneNumber.extract('2068671234'));
+console.log(PhoneNumber.parse('2068671234'));
 // breaks the number into parts: { npa: '206', nxx: '867', station: '1234' }
 
 console.log(PhoneNumber.isTollFree('206 8671234')); // false, not toll-free

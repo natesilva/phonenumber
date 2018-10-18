@@ -6,3 +6,5 @@ ava.config.js
 .prettier*
 .editorconfig
 test
+tsconfig.*
+*.tgz

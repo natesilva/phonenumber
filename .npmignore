@@ -5,3 +5,4 @@ src
 ava.config.js
 .prettier*
 .editorconfig
+test

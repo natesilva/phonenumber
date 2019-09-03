@@ -1,3 +1,7 @@
+The changelog can now be found on the [Releases](https://github.com/natesilva/phonenumber/releases) page.
+
+## Previous release notes:
+
 ### Version 1.5.0
 
 12-Oct-2018

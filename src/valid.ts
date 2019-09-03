@@ -10,5 +10,5 @@ import { validImpl } from './validImpl';
  */
 export function valid(phoneNumber: string) {
   const parts = parseImpl(phoneNumber);
-  return validImpl(parts);
+  return (parts && validImpl(parts)) || false;
 }

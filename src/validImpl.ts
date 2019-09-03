@@ -5,11 +5,7 @@ import { ParsedPhoneNumber } from './parsedPhoneNumber';
  * Internal implementation for valid(). Takes a ParsedPhoneNumber object instead of a
  * string.
  */
-export function validImpl(parts?: ParsedPhoneNumber) {
-  if (!parts) {
-    return false;
-  }
-
+export function validImpl(parts: ParsedPhoneNumber) {
   if (parts.npa.endsWith('11')) {
     // NPAs that end with '11' are invalid
     return false;

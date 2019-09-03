@@ -6,3 +6,4 @@ build
 *.tgz
 .nyc_output
 coverage
+*.sublime-workspace

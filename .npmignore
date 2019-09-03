@@ -11,4 +11,5 @@ tsconfig.*
 .nyc_output
 coverage
 .mocharc*
+.eslint*
 *.spec.js

@@ -15,7 +15,7 @@ export function parseImpl(phoneNumber: string) {
   }
 
   const digits = digitsOnly(phoneNumber);
-  const matches = digits.match(nanpPattern);
+  const matches = nanpPattern.exec(digits);
 
   if (!matches) {
     return undefined;
@@ -24,7 +24,7 @@ export function parseImpl(phoneNumber: string) {
   const result: ParsedPhoneNumber = {
     npa: matches[1],
     nxx: matches[2],
-    station: matches[3]
+    station: matches[3],
   };
 
   return result;

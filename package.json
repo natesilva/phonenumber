@@ -9,8 +9,9 @@
     "build": "tsc",
     "prettier": "prettier --write \"{src,test}/**/*.?(ts|json)\"",
     "prepare": "npm run clean && npm run build",
-    "test": "ava",
-    "test:watch": "ava -w"
+    "test": "mocha \"./src/**/*.spec.ts\"",
+    "test:watch": "mocha \"./src/**/*.spec.ts\"  -w --watch-extensions ts",
+    "coverage": "nyc --reporter lcov --reporter text --extension .ts mocha \"./src/**/*.spec.ts\""
   },
   "keywords": [
     "phone",
@@ -29,20 +30,13 @@
   "devDependencies": {
     "@types/chalk": "^2.2.0",
     "@types/node": "^10.11.4",
-    "ava": "1.0.0-beta.8",
     "del-cli": "^1.1.0",
     "prettier": "^1.14.3",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.1"
-  },
-  "ava": {
-    "compileEnhancements": false,
-    "extensions": [
-      "ts"
-    ],
-    "require": [
-      "ts-node/register/transpile-only"
-    ]
+    "@types/mocha": "^5.2.7",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
   },
   "prettier": {
     "printWidth": 90,

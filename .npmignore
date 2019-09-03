@@ -8,3 +8,7 @@ ava.config.js
 test
 tsconfig.*
 *.tgz
+.nyc_output
+coverage
+.mocharc*
+*.spec.js

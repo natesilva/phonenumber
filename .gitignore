@@ -4,3 +4,5 @@ build
 **/test.ts
 .vscode
 *.tgz
+.nyc_output
+coverage
